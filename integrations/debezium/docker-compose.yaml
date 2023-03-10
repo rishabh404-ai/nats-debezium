@@ -80,9 +80,6 @@ services:
       context: ./debezium-cassandra-init
     ports:
       - "9042:9042"
-    environment:
-      - CASSANDRA_CLUSTER_NAME=mycluster
-      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     volumes:
       - ./cassandra.yaml:/opt/cassandra/conf/cassandra.yaml
       - ./cassandra-data:/var/lib/cassandra
