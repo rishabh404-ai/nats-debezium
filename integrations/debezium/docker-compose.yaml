@@ -82,7 +82,7 @@ services:
       - "9042:9042"
     volumes:
       - ./cassandra.yaml:/opt/cassandra/conf/cassandra.yaml
-      - ./cassandra-data:/var/lib/cassandra
+      - ./cassandra-data:/var/lib/cassandraa
 
 
   debezium:
@@ -91,7 +91,7 @@ services:
     volumes:
       - ./application.properties:/debezium/conf/application.properties
       - ./cassandra.yaml:/etc/cassandra/cassandra.yaml
-      - ./cassandra-data:/var/lib/cassandra
+      - ./cassandra-data:/var/lib/cassandraa
       - ./driver.conf:/debezium/conf/driver.conf
     depends_on:
       - cassandra
