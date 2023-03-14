@@ -7,4 +7,6 @@ RUN chmod +x /startup-script.sh
 
 USER cassandra
 
+RUN chmod 777 /var/bin/cassandra
+
 CMD /startup-script.sh
